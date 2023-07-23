@@ -1,0 +1,30 @@
+.nav {
+    background-color: var(--secondary-color) !important;
+}
+
+.nav {
+    --bs-navbar-padding-y: 1.5rem !important;
+    --bs-navbar-padding-x: var(--container) !important;
+    box-shadow: var(--nav-shadow);
+    width: 100% !important;
+}
+
+.navTitle{
+    font-size: 1.25rem !important;
+}
+
+.themeToggle {
+    font-size: 0.875rem !important;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .themeToggle {
+        font-size: 12px !important;
+    }
+
+    .navTitle {
+        font-size: 0.875rem !important;
+
+    }
+}

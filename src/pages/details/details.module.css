@@ -1,0 +1,79 @@
+.backButton{
+    box-shadow: var(--back-shadow);
+    width: 115px;
+    height: 34.1px;
+    border-radius: 4px;
+    margin: 70px 0 !important;
+    font-size: 0.875rem;
+}
+
+.borderCountries, h1, .details{
+    hyphens: auto;
+}
+
+.countryName{
+    font-size: 1rem;
+}
+
+.borderCountriesTitle {
+    flex: 0 0 auto;
+}
+
+.bordersContainer{
+    margin-top: 80px !important;
+}
+
+.countryDetails{
+    --bs-gutter-x: 7rem !important;
+}
+
+.flagContainer{
+    height: 400px !important;
+    
+}
+
+.flagImage{
+    width: 100%;
+    height: 100%;
+    box-shadow: var(--flag-shadow);
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+    .countryDetails{
+        --bs-gutter-x: 2.5rem !important;
+    }
+}
+
+@media (max-width: 991px){
+    .backButton {
+        width: 105px;
+        border-radius: 2px;
+        height: 32.4px;
+        margin-top:40px !important;
+    }
+
+    .countryName{
+        margin-top: 2.3rem!important;
+    }
+    
+    .details{
+        margin-bottom: 40px  !important;
+    }
+
+    .bordersContainer {
+        margin-top: 0 !important;
+    }
+}
+
+@media (max-width: 767px) {
+  
+    .flagContainer  {
+        height: 225px !important;
+        width: 100% !important;
+    }
+
+    .countryDetails {
+        --bs-gutter-x: 0 !important;
+    }
+}

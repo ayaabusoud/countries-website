@@ -1,0 +1,39 @@
+.countriesContainer {
+    height: var(--main-height);
+    max-height: var(--main-max-height);
+    margin-bottom: 0 !important;
+    --bs-gutter-y: 0 !important;
+    --bs-gutter-x: 4rem !important;
+}
+
+.activeStar {
+    color: #F0770C;
+}
+
+.mainContent{
+    gap: 30px !important;
+}
+
+.homeMain{
+    padding: 0 45px !important;
+}
+
+@media (max-width: 767px) {
+
+    .filterSection{
+        padding-top: 1.857rem !important;
+        padding-bottom: 1.857rem !important;
+    }
+
+    .homeMain{
+        min-height:calc(100vh - 265.42px)
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    
+    .countriesContainer{
+        --bs-gutter-x: 2rem !important;
+    }    
+}
