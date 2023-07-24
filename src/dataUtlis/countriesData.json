@@ -39,7 +39,7 @@
         "CHE"
       ],
       "population": 83240525,
-      "flag": "images/de.png"
+      "flag": "/images/de.png"
     },
     {
         "name": {
@@ -79,7 +79,7 @@
           "VEN"
         ],
         "population": 212559409,
-        "flag": "images/br.png"
+        "flag": "/images/br.png"
     },
     {
         "name": {
@@ -118,7 +118,7 @@
           "SYR"
         ],
         "population": 10203140,
-        "flag": "images/jo.png"
+        "flag": "/images/jo.png"
       },
       {
         "name": {
@@ -167,6 +167,6 @@
           "JOR"
         ],
         "population": 4803269,
-        "flag": "images/ps.png"
+        "flag": "/images/ps.png"
       }
   ]

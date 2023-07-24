@@ -6,10 +6,6 @@
     --bs-gutter-x: 4rem !important;
 }
 
-.activeStar {
-    color: #F0770C;
-}
-
 .mainContent{
     gap: 30px !important;
 }

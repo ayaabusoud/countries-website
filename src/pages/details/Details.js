@@ -4,6 +4,7 @@ import style from './details.module.css';
 import Loader from '../../components/loader/Loader';
 import BorderCard from '../../components/borderCard/BorderCard';
 import { isEmptyObject } from 'jquery';
+import BackButton from '../../components/backButton/BackButton';
 
 export default function Details() {
 
@@ -11,14 +12,13 @@ export default function Details() {
   const LOCATION = useLocation();
   let { name, population, region, subregion, capital, tld, currencies, languages, flag, borders } = LOCATION.state?.details || {};
 
-  if (isEmptyObject(LOCATION.state?.details)) {
-    return <p className='pt-3 pl-3'>No details available.</p>;
-  }
-
   return (
     <div className="page-container pb-5">
-      <Link className={`text-decoration-none ${style.backButton} border-0 d-flex justify-content-center align-items-center`}
-        to="/home"><i className="fa-solid fa-arrow-left-long pe-2" /> Back</Link>
+      <BackButton navigateTo="/home" />
+      
+      {isEmptyObject(LOCATION.state?.details) ? (
+        <p className=''>No details available.</p>
+      ) : (
       <main className={`row ${style.countryDetails}`}>
         <Loader />
         <div className={`col-lg-6 col-sm-12 ${style.flagContainer}`}>
@@ -52,6 +52,8 @@ export default function Details() {
           }
         </div>
       </main>
+      )}                     
+
     </div>
 
   )

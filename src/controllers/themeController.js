@@ -12,11 +12,9 @@ export function setTheme(theme){
 }
 
 export function changeTheme(currentTheme){
-    let theme;
+    let theme = DARK_MODE;
     if(currentTheme === DARK_MODE){
         theme = LIGHT_MODE;
-    }else{
-        theme = DARK_MODE;
     }
     setTheme(theme);
     return theme;

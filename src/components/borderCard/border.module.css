@@ -3,4 +3,5 @@
     box-shadow: var(--border-countries-shadow);
     border-radius: 2px !important;
     padding: 2px 20px !important;
+    background-color: var(--secondary-color);
 }

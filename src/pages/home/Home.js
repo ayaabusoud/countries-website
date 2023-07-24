@@ -23,7 +23,11 @@ export default function Home() {
                     <div className="position-relative w-100">
                         <Loader />
                         <div className={`row ${style.countriesContainer} overflow-y-scroll`} draggable="false" >
-                            {countries.map((country) => (<CountryCard key={country.name.common} country={country} />))}
+                            {countries.length > 0 ? (
+                                countries.map((country) => <CountryCard key={country.name.common} country={country} />)
+                            ) : (
+                                <p class="no-results">No results found</p>
+                            )}                     
                         </div>
                     </div>
                 </div>
