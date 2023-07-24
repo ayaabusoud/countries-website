@@ -10,9 +10,7 @@
     gap: 30px !important;
 }
 
-.homeMain{
-    padding: 0 45px !important;
-}
+
 
 @media (max-width: 767px) {
 
@@ -23,6 +21,10 @@
 
     .homeMain{
         min-height:calc(100vh - 265.42px)
+    }
+
+    .homeMain{
+        padding: 0 45px !important;
     }
 
 }
