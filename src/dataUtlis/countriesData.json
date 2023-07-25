@@ -1,0 +1,172 @@
+[
+    {
+      "name": {
+        "common": "Germany",
+        "official": "Federal Republic of Germany",
+        "nativeName": {
+          "deu": {
+            "official": "Bundesrepublik Deutschland",
+            "common": "Deutschland"
+          }
+        }
+      },
+      "tld": [
+        ".de"
+      ],
+      "currencies": {
+        "EUR": {
+          "name": "Euro",
+          "symbol": "€"
+        }
+      },
+      "capital": [
+        "Berlin"
+      ],
+      "region": "Europe",
+      "subregion": "Western Europe",
+      "languages": {
+        "deu": "German"
+      },
+      "borders": [
+        "AUT",
+        "BEL",
+        "CZE",
+        "DNK",
+        "FRA",
+        "LUX",
+        "NLD",
+        "POL",
+        "CHE"
+      ],
+      "population": 83240525,
+      "flag": "/images/de.png"
+    },
+    {
+        "name": {
+          "common": "Brazil",
+          "official": "Federative Republic of Brazil",
+          "nativeName": {
+            "por": {
+              "official": "República Federativa do Brasil",
+              "common": "Brasil"
+            }
+          }
+        },
+        "tld": [
+          ".br"
+        ],
+        "currencies": {
+          "BRL": {
+            "name": "Brazilian real",
+            "symbol": "R$"
+          }
+        },
+        "region": "Americas",
+        "subregion": "South America",
+        "languages": {
+          "por": "Portuguese"
+        },
+        "borders": [
+          "ARG",
+          "BOL",
+          "COL",
+          "GUF",
+          "GUY",
+          "PRY",
+          "PER",
+          "SUR",
+          "URY",
+          "VEN"
+        ],
+        "population": 212559409,
+        "flag": "/images/br.png"
+    },
+    {
+        "name": {
+          "common": "Jordan",
+          "official": "Hashemite Kingdom of Jordan",
+          "nativeName": {
+            "ara": {
+              "official": "المملكة الأردنية الهاشمية",
+              "common": "الأردن"
+            }
+          }
+        },
+        "tld": [
+          ".jo",
+          "الاردن."
+        ],
+        "currencies": {
+          "JOD": {
+            "name": "Jordanian dinar",
+            "symbol": "د.ا"
+          }
+        },
+        "capital": [
+          "Amman"
+        ],
+        "region": "Asia",
+        "subregion": "Western Asia",
+        "languages": {
+          "ara": "Arabic"
+        },
+        "borders": [
+          "IRQ",
+          "ISR",
+          "PSE",
+          "SAU",
+          "SYR"
+        ],
+        "population": 10203140,
+        "flag": "/images/jo.png"
+      },
+      {
+        "name": {
+          "common": "Palestine",
+          "official": "State of Palestine",
+          "nativeName": {
+            "ara": {
+              "official": "دولة فلسطين",
+              "common": "فلسطين"
+            }
+          }
+        },
+        "tld": [
+          ".ps",
+          "فلسطين."
+        ],
+        "cca2": "PS",
+        "ccn3": "275",
+        "cca3": "PSE",
+        "cioc": "PLE",
+        "independent": false,
+        "status": "officially-assigned",
+        "unMember": false,
+        "currencies": {
+          "EGP": {
+            "name": "Egyptian pound",
+            "symbol": "E£"
+          },
+          "ILS": {
+            "name": "Israeli new shekel",
+            "symbol": "₪"
+          },
+          "JOD": {
+            "name": "Jordanian dinar",
+            "symbol": "JD"
+          }
+        },
+        "region": "Asia",
+        "subregion": "Western Asia",
+        "languages": {
+          "ara": "Arabic"
+        },
+        "borders": [
+          "ISR",
+          "EGY",
+          "JOR"
+        ],
+        "population": 4803269,
+        "flag": "/images/ps.png"
+      }
+  ]

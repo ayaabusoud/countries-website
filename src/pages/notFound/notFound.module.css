@@ -1,0 +1,7 @@
+.notFoundImg{
+    width: 350px;
+}
+
+.notFoundPage{
+    height: calc(100vh - 72px);
+}

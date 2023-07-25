@@ -1,0 +1,17 @@
+.backButton{
+    box-shadow: var(--back-shadow);
+    width: 115px;
+    height: 34.1px;
+    border-radius: 4px;
+    margin: 70px 0 !important;
+    font-size: 0.875rem;
+    background-color: var(--secondary-color);
+}
+@media (max-width: 991px){
+    .backButton {
+        width: 105px;
+        border-radius: 2px;
+        height: 32.4px;
+        margin-top:40px !important;
+    }
+}
