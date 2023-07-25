@@ -1,37 +1,29 @@
-import React from 'react'
-import Searchbar from '../../components/searchbar/Searchbar'
-import DropDown from '../../components/dropDown/DropDown'
-import Favourites from '../../components/favouritesSection/Favourites';
-import CountryCard from '../../components/countryCard/CountryCard';
-import countries from '../../dataUtlis/countriesData.json';
+import React, { useState } from 'react'
+import FavouritesSection from '../../components/favouritesSection/FavouritesSection';
 import Loader from '../../components/loader/Loader';
 import style from './home.module.css'
+import FilterSection from '../../components/filterSection/FilterSection';
+import CountriesSection from '../../components/countriesSection/CountriesSection';
+import ToastNotification from '../../components/toastNotification/ToastNotification'
+import { FavouritesProvider } from '../../controllers/FavouritesContext';
 
 export default function Home() {
-    let dropDownOptions = ["No filter", "Favourites", "Africa" , "Americas", "Asia","Europe","Oceania"];
+    let [showToast, setShowToast] = useState(false); 
+    let [toastMessage, setToastMessage] = useState(''); 
 
     return (
-        <div>
-            <section className={`page-container py-md-5 d-md-flex justify-content-between ${style.filterSection}`}>
-                <Searchbar placeholder="Search for a country..." name="search-country" />
-                <DropDown options={dropDownOptions} />
-            </section>
-
+        <FavouritesProvider>
+            <FilterSection />
             <main className={`page-container position-relative ${style.homeMain}`}>
                 <div className={`d-md-flex ${style.mainContent}`}>
-                    <Favourites />
+                    <FavouritesSection setShowToast={setShowToast} setToastMessage={setToastMessage} />
                     <div className="position-relative w-100">
                         <Loader />
-                        <div className={`row ${style.countriesContainer} overflow-y-scroll`} draggable="false" >
-                            {countries.length > 0 ? (
-                                countries.map((country) => <CountryCard key={country.name.common} country={country} />)
-                            ) : (
-                                <p class="no-results">No results found</p>
-                            )}                     
-                        </div>
+                        <CountriesSection />
                     </div>
                 </div>
+                {showToast && <ToastNotification message={toastMessage} setShowToast={setShowToast} />}
             </main>
-        </div>
+        </FavouritesProvider>
     )
 }

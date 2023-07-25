@@ -1,15 +1,25 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import style from './countryCard.module.css'
+import { endDrag, startDrag } from '../../controllers/dragDropController';
+import { handleFavouritesButtons } from '../../controllers/favouritesControler';
+import { useFavourites } from '../../controllers/FavouritesContext';
+ 
+export const COUNTRY_ID= 'country-id';
+export const ACTIVE_FAVOURITE_BUTTON = 'active-star';
 
 export default function CountryCard(props) {
     const NOT_AVAILABLE = 'N/A';
     let { name, flag, population, region, capital } = props.country;
+    const { favourites, setFavourites } = useFavourites();
+    let active = favourites.includes(name.common);
 
-  return (
+    return (
       <div className="col-md-4 col-sm-12">
           <Link to='/details' state={{ details: props.country }} className={`card border-0 text-decoration-none ${style.countryCard} overflow-hidden position-relative`}
-              country-id={name?.common} draggable="true">
+              country-id={name?.common} draggable="true"
+              onDragStart={(e) => startDrag(e)}
+              onDragEnd={(e) => endDrag(e.currentTarget)}>
               <img className={`${style.flag} object-fit-cover`} src={flag} alt={name?.official} loading="lazy" draggable="false" />
               <div className="px-4">
                   <p className="fw-bolder py-3 text-truncate">{name.common || NOT_AVAILABLE}</p>
@@ -19,7 +29,7 @@ export default function CountryCard(props) {
                       <li className="fw-semibold text-truncate">Capital: <span className="fw-light">{capital || NOT_AVAILABLE}</span></li>
                   </ul>
               </div>
-              <i className={`fa-solid fa-star position-absolute d-md-none ${style.favouriteButton}`} />
+              <i className={`fa-solid fa-star position-absolute d-md-none ${style.favouriteButton} ${active ? ACTIVE_FAVOURITE_BUTTON : ''}`} onClick={(e)=> handleFavouritesButtons(e,favourites,setFavourites)}/>
           </Link>
       </div>
     )

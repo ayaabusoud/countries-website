@@ -3,9 +3,10 @@ import { storeTheme } from "../dataUtlis/dataStorage";
 export const LIGHT_MODE = 'light';
 export const DARK_MODE = 'dark'
 
-export function setTheme(theme){
-    if(!theme){
-        theme = LIGHT_MODE;
+export function setTheme(theme) {
+    if (!theme) {
+        console.warn("current theme is undefined");
+        return;
     }
     document.documentElement.setAttribute('data-theme', theme);
     storeTheme(theme);
