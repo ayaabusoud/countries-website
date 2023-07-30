@@ -1,0 +1,11 @@
+.notFoundImg{
+    width: 300px;
+}
+
+.message{
+    color: var(--secondary-font-color);
+}
+
+.container{
+    flex-grow: 1 !important
+}

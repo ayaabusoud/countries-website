@@ -5,6 +5,8 @@ import Loader from '../../components/loader/Loader';
 import BorderCard from '../../components/borderCard/BorderCard';
 import { isEmptyObject } from 'jquery';
 import BackButton from '../../components/backButton/BackButton';
+import BorderSection from '../../components/borderSection/BorderSection';
+import NoResults from '../../components/noResults/NoResults';
 
 export default function Details() {
 
@@ -13,13 +15,13 @@ export default function Details() {
   let { name, population, region, subregion, capital, tld, currencies, languages, flag, borders } = LOCATION.state?.details || {};
 
   return (
-    <div className="page-container pb-5">
-      <BackButton navigateTo="/home" />
-      
-      {isEmptyObject(LOCATION.state?.details) ? (
-        <p className=''>No details available.</p>
+    <div className={`page-container d-flex flex-column ${style.detailsPage}`}>
+       {isEmptyObject(LOCATION.state?.details) ? (
+        <NoResults message={"No details found"} />
       ) : (
-      <main className={`row ${style.countryDetails}`}>
+        <div>
+      <BackButton navigateTo="/home" />
+      <main className={`row pb-5  ${style.countryDetails}`}>
         <Loader />
         <div className={`col-lg-6 col-sm-12 ${style.flagContainer}`}>
           <img src={flag} alt={name?.common} className={`${style.flagImage} object-fit-cover`} />
@@ -43,17 +45,11 @@ export default function Details() {
           </div>
 
           {borders &&
-            <div className={`${style.bordersContainer} d-lg-flex`}>
-              <p className={` ${style.borderCountriesTitle} fw-semibold pe-2 pb-2`}>Border Countries: </p>
-              <div className={`d-flex flex-wrap ${style.borderCountries}`}>
-              {borders.map((border) => (<BorderCard key={border} countryName={border} />))}
-            </div>
-            </div>
-          }
+          <BorderSection borderCountries={borders}/>}
         </div>
       </main>
+      </div>
       )}                     
-
     </div>
 
   )

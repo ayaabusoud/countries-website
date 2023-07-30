@@ -6,14 +6,6 @@
     font-size: 1rem;
 }
 
-.borderCountriesTitle {
-    flex: 0 0 auto;
-}
-
-.bordersContainer{
-    margin-top: 80px !important;
-}
-
 .countryDetails{
     --bs-gutter-x: 7rem !important;
 }
@@ -29,11 +21,16 @@
     box-shadow: var(--flag-shadow);
 }
 
+.detailsPage{
+    min-height: calc(100vh - 106.09px);
+}
+
 @media (min-width: 768px) and (max-width: 1200px) {
 
     .countryDetails{
         --bs-gutter-x: 2.5rem !important;
     }
+
 }
 
 @media (max-width: 991px){
@@ -49,6 +46,10 @@
     .bordersContainer {
         margin-top: 0 !important;
     }
+
+    .detailsPage{
+        min-height: calc(100vh - 98.4px);
+    }
 }
 
 @media (max-width: 767px) {
@@ -61,4 +62,5 @@
     .countryDetails {
         --bs-gutter-x: 0 !important;
     }
+
 }

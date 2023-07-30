@@ -1,3 +1,4 @@
 .notification{
     width: max-content !important;
+    background-color: var(--secondary-color) !important;
 }

@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { Toast } from 'react-bootstrap'
 import style from './toastNotification.module.css'
 
-export default function ToastNotification({message}) {
+export default function ToastNotification({message , setShowToast}) {
+
   return (
-    <div className=" toast-container position-fixed bottom-0 start-0 p-3 ">
-      <div id="liveToast" className={` ${style.notification} toast text-center`} role="alert" aria-live="assertive" aria-atomic="true">
-        <div className="toast-body" >{message}</div>
-      </div>
+    <div>
+      <Toast className={`position-absolute bottom-0 text-center ${style.notification}`}
+        onClose={()=> setShowToast(false) }
+        autohide
+        show={true}
+        delay={2000} >
+        <Toast.Body >{message}</Toast.Body>
+      </Toast>
     </div>
- )
+  )
 }
