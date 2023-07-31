@@ -3,7 +3,6 @@
     z-index: -99;
     background: var(--bg-color);
     transition: opacity 0.75s, visibility 0.75s;
-    top: calc((100vh - 310px) / 2) ;
 }
 
 .loader::after {

@@ -12,3 +12,10 @@
         --bs-gutter-x: 2rem !important;
     }    
 }
+
+@media (min-width: 768px){
+
+    .countriesContainer{
+        width: 100% !important;
+    }
+}

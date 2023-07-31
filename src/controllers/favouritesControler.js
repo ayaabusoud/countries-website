@@ -32,10 +32,11 @@ export function handleFavouritesButtons(e,favourites,setFavourites){
     }
 }
 
-export function removeFavouriteItem(e,favourites,setFavourites) {
-    let countryId =e.target.parentNode.getAttribute(COUNTRY_ID);
-    if(!countryId){
-        countryId =e.target.parentNode.parentNode.getAttribute(COUNTRY_ID);
+export function removeFavouriteItem(e, favourites, setFavourites) {
+    let countryId = e.target.parentNode.getAttribute(COUNTRY_ID) ?? e.target.parentNode.parentNode.getAttribute(COUNTRY_ID);
+  
+    if (countryId) {
+      removeFavourite(favourites, setFavourites, countryId);
     }
-    removeFavourite(favourites, setFavourites, countryId);   
- }
+  }
+  

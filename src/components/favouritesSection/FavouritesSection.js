@@ -2,7 +2,7 @@ import React from 'react'
 import style from './favouritesSection.module.css'
 import { dragEnter, dragLeave, dropElement } from '../../controllers/dragDropController'
 import FavouriteItem from '../favouriteItem/FavouriteItem'
-import { useFavourites } from '../../controllers/FavouritesContext'
+import { useFavourites } from '../../context/FavouritesContext'
 import { addFavourite, isFavourite } from '../../controllers/favouritesControler'
 
 export default function FavouritesSection({ setShowToast, setToastMessage }) {

@@ -1,18 +1,24 @@
 import React from 'react';
 import style from './countriesSection.module.css';
 import CountryCard from '../countryCard/CountryCard';
-import countries from '../../dataUtlis/countriesData.json';
 import NoResults from '../noResults/NoResults';
+import Loader from '../loader/Loader';
+import { useCountries } from '../../context/CountriesContext';
 
 export default function CountriesSection() {
 
+  let { countries, isLoading } = useCountries();
+
   return (
-        <div className={`row ${style.countriesContainer} overflow-y-scroll`} draggable="false" >
-            {countries.length > 0 ? (
-                countries.map((country,index) => <CountryCard key={index} country={country} />)
-            ) : (
-                <NoResults message={"No countries found"}/>
-            )}
-        </div>
-    )
+   
+      <div className={`row ${style.countriesContainer} overflow-y-scroll position-relative`} draggable="false">
+        {isLoading && <Loader />}
+        {!isLoading && countries.length == 0 ? (
+          <NoResults message={"No countries found"} />
+        ) : (
+          countries.map((country, index) => <CountryCard key={index} country={country} />)
+
+        )}
+      </div>
+  );
 }
