@@ -3,24 +3,24 @@ import { Link } from 'react-router-dom'
 import style from './countryCard.module.css'
 import { endDrag, startDrag } from '../../controllers/dragDropController';
 import { handleFavouritesButtons } from '../../controllers/favouritesControler';
-import { useFavourites } from '../../controllers/FavouritesContext';
+import { useFavourites } from '../../context/FavouritesContext';
  
 export const COUNTRY_ID= 'country-id';
 export const ACTIVE_FAVOURITE_BUTTON = 'active-star';
 
 export default function CountryCard(props) {
     const NOT_AVAILABLE = 'N/A';
-    let { name, flag, population, region, capital } = props.country;
+    let { name, flags, population, region, capital } = props.country;
     const { favourites, setFavourites } = useFavourites();
     let active = favourites.includes(name.common);
 
     return (
       <div className="col-md-4 col-sm-12">
-          <Link to='/details' state={{ details: props.country }} className={`card border-0 text-decoration-none ${style.countryCard} overflow-hidden position-relative`}
+          <Link to='/details' state={{ id: name?.common }} className={`card border-0 text-decoration-none ${style.countryCard} overflow-hidden position-relative`}
               country-id={name?.common} draggable="true"
               onDragStart={(e) => startDrag(e)}
               onDragEnd={(e) => endDrag(e.currentTarget)}>
-              <img className={`${style.flag} object-fit-cover`} src={flag} alt={name?.official} loading="lazy" draggable="false" />
+              <img className={`${style.flag} object-fit-cover`} src={flags?.svg} alt={name?.official} loading="lazy" draggable="false" />
               <div className="px-4">
                   <p className="fw-bolder py-3 text-truncate">{name.common || NOT_AVAILABLE}</p>
                   <ul>

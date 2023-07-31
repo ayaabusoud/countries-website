@@ -14,15 +14,14 @@ export function endDrag(element){
 export function dragEnter(element){
     element.classList.add(ELEMENT_HOVER);
 }
-
-export function dragLeave(e){
-    const children = Array.from(e.currentTarget.children);
-    let isLeaving = children.includes(e.target);
-
+ 
+export function dragLeave(e) {
+    let isLeaving = !e.currentTarget.contains(e.relatedTarget);
+  
     if (isLeaving) {
       e.currentTarget.classList.remove(ELEMENT_HOVER);
     }
-}
+  }
 
 export function dropElement(e,addFavouriteItem) {
     e.currentTarget.classList.remove(ELEMENT_HOVER);

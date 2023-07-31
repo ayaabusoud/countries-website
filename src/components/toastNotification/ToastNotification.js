@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Toast } from 'react-bootstrap'
 import style from './toastNotification.module.css'
 
