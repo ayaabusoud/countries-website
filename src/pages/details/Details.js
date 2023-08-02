@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import {useLocation } from 'react-router-dom'
-import style from './details.module.css';
+import { useLocation } from 'react-router-dom'
+import style from './Details.module.css';
 import Loader from '../../components/loader/Loader';
-import DetailsSection from '../../components/detailsSection/DetailsSection';
-import { getCountriesByName } from '../../services/countriesAPIs';
+import { getCountriesByName } from '../../services/CountriesAPIs';
+import CountryDetailsSection from '../../components/countryDetailsSection/CountryDetailsSection';
 
 export default function Details() {
   const LOCATION = useLocation();
@@ -34,7 +34,7 @@ export default function Details() {
       {isLoading ? (
         <Loader />
       ) : (
-        <DetailsSection country={country} />
+        <CountryDetailsSection country={country} />
       )}
     </div>
   )

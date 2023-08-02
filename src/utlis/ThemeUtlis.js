@@ -1,4 +1,4 @@
-import { storeTheme } from "../dataUtlis/dataStorage";
+import { storeTheme } from "../dataUtlis/DataStorage";
 
 export const LIGHT_MODE = 'light';
 export const DARK_MODE = 'dark'
@@ -12,12 +12,11 @@ export function setTheme(theme) {
     storeTheme(theme);
 }
 
-export function changeTheme(currentTheme){
+export function changeTheme(currentTheme) {
     let theme = DARK_MODE;
-    if(currentTheme === DARK_MODE){
+    if (currentTheme === DARK_MODE) {
         theme = LIGHT_MODE;
     }
     setTheme(theme);
     return theme;
 }
-

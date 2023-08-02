@@ -2,15 +2,17 @@
     flex: 0 0 auto;
 }
 
-.bordersContainer{
+.bordersContainer {
     margin-top: 80px !important;
 }
 
-.borderCountries, h1, .details{
+.borderCountries,
+h1,
+.details {
     hyphens: auto;
 }
 
-@media (max-width: 991px){
+@media (max-width: 991px) {
 
     .bordersContainer {
         margin-top: 0 !important;

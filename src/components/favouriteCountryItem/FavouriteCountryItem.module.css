@@ -11,19 +11,19 @@
     color: var(--font-color);
 }
 
-.favCountryName{
+.favCountryName {
     font-size: 0.85rem !important;
 }
 
-.favouriteCountry{
+.favouriteCountry {
     margin-bottom: 12px;
 }
 
-.favouriteContent{
+.favouriteContent {
     max-width: calc(100% - 50px);
 }
 
-.favouriteFlag{
+.favouriteFlag {
     width: 35px;
     height: 20px;
     border-radius: 4px;

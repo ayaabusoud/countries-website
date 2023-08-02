@@ -1,6 +1,6 @@
 .searchbarInput::placeholder,
 .searchbarInput,
-.searchbar i{
+.searchbar i {
     color: var(--font-color) !important;
 }
 
@@ -10,20 +10,20 @@
     font-size: 0.875rem !important;
 }
 
-.searchbar {  
+.searchbar {
     width: 480px;
     height: var(--filter-search-height);
     box-shadow: var(--filter-shadow);
 }
 
-.searchbarInput:focus{
+.searchbarInput:focus {
     outline: none;
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
 
     .searchbar {
-        width: 380px ;
+        width: 380px;
     }
 }
 

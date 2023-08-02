@@ -1,17 +1,17 @@
-.notFoundImg{
+.notFoundImg {
     width: 300px;
 }
 
-.notFoundPage{
+.notFoundPage {
     height: calc(100vh - 72px);
-    padding:  0 30px;
+    padding: 0 30px;
 }
 
-.title{
+.title {
     color: var(--secondary-font-color);
 }
 
-.text{
+.text {
     color: var(--notFound-text-color);
     width: 90%;
 }

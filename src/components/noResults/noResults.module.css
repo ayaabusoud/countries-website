@@ -1,12 +1,12 @@
-.notFoundImg{
+.notFoundImg {
     width: 300px;
 }
 
-.message{
+.message {
     color: var(--secondary-font-color);
 }
 
-.container{
-    transform: translate(-50%,-50%);
+.container {
+    transform: translate(-50%, -50%);
 
 }

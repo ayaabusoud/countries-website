@@ -1,10 +1,10 @@
-.mainContent{
+.mainContent {
     gap: 30px !important;
 }
 
 @media (max-width: 767px) {
 
-    .homeMain{
+    .homeMain {
         padding: 0 45px !important;
     }
 }

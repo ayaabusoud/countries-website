@@ -1,11 +1,11 @@
-.countryCard{
+.countryCard {
     box-shadow: var(--card-shadow);
     padding-bottom: 40px !important;
     margin-bottom: 4.4rem !important;
     background-color: var(--secondary-color) !important;
 }
 
-.flag{
+.flag {
     height: 170px;
 }
 
@@ -18,14 +18,13 @@
 
 
 @media (min-width: 768px) and (max-width: 1200px) {
-    .countryCard{
+    .countryCard {
         margin-bottom: 3rem !important;
     }
 }
 
 @media (max-width: 767px) {
-    .countryCard{
-        margin-bottom: 2.3rem  !important;
+    .countryCard {
+        margin-bottom: 2.3rem !important;
     }
 }
-

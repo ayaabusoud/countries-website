@@ -5,7 +5,7 @@ export const countryDetailsUrl = `${baseUrl}/name/`;
 export const allCountriesUrl = `${baseUrl}/all`;
 
 
-let currentTime ;
+let currentTime;
 export async function getCountriesByName(countryName) {
   let time = Date.now();
   currentTime = time;
@@ -26,18 +26,18 @@ export async function getCountriesByName(countryName) {
   }
 }
 
-export async function getAllCountries(){
-    try {
-        let response = await axios.get(allCountriesUrl);
-        if (!response) {
-            throw new Error('Failed to fetch data');
-        }
-        let countries = await response.data;
-        if (!countries) {
-          throw new Error('No countries found');
-        }
-        return countries;
-    } catch (error) {
-        throw new Error(`API failed: ${error.message}`);
+export async function getAllCountries() {
+  try {
+    let response = await axios.get(allCountriesUrl);
+    if (!response) {
+      throw new Error('Failed to fetch data');
     }
+    let countries = await response.data;
+    if (!countries) {
+      throw new Error('No countries found');
+    }
+    return countries;
+  } catch (error) {
+    throw new Error(`API failed: ${error.message}`);
+  }
 }

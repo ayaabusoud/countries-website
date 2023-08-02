@@ -1,11 +1,11 @@
 import React from 'react'
-import style from './favouritesSection.module.css'
-import { dragEnter, dragLeave, dropElement } from '../../controllers/dragDropController'
-import FavouriteItem from '../favouriteItem/FavouriteItem'
+import style from './FavouriteCountriesSection.module.css'
+import { dragEnter, dragLeave, dropElement } from '../../utlis/DragDropUtlis'
+import FavouriteCountryItem from '../favouriteCountryItem/FavouriteCountryItem'
 import { useFavourites } from '../../context/FavouritesContext'
-import { addFavourite, isFavourite } from '../../controllers/favouritesControler'
+import { addFavourite, isFavourite } from '../../utlis/FavouritesUtlis'
 
-export default function FavouritesSection({ setShowToast, setToastMessage }) {
+export default function FavouriteCountriesSection({ setShowToast, setToastMessage }) {
 
   let { favourites, setFavourites } = useFavourites();
 
@@ -26,9 +26,8 @@ export default function FavouritesSection({ setShowToast, setToastMessage }) {
       onDrop={(e) => dropElement(e, addFavouriteItem)}>
       <h2 className="fw-semibold">Favourites</h2>
       <div className={`${style.favouritesList} overflow-y-scroll w-100`} >
-        {favourites && favourites.map((favourite, index) => (<FavouriteItem key={index} id={favourite} />))}
+        {favourites && favourites.map((favourite, index) => (<FavouriteCountryItem key={index} id={favourite} />))}
       </div>
     </div>
   );
 }
-  

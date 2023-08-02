@@ -1,23 +1,25 @@
-.filterDropdown .filter{
+.filterDropdown .filter {
     box-shadow: var(--filter-shadow);
     height: var(--filter-search-height);
     font-size: 0.875rem !important;
 }
 
-.filterMenu, .filterDropdown .filter{
+.filterMenu,
+.filterDropdown .filter {
     width: 190px;
 }
 
-.filterMenu{
+.filterMenu {
     margin-top: 3px !important;
     font-size: 0.875rem !important;
 }
 
-.filterMenu:hover{
-    cursor:pointer;
+.filterMenu:hover {
+    cursor: pointer;
 }
 
-.filterDropdown .filter, .filterMenu{
+.filterDropdown .filter,
+.filterMenu {
     background-color: var(--secondary-color) !important;
 }
 
@@ -26,13 +28,13 @@
     color: var(--font-color) !important;
 }
 
-.menuItem:hover{
-    background-color:  var(--bg-filter-menu) !important;
+.menuItem:hover {
+    background-color: var(--bg-filter-menu) !important;
 }
 
 @media (max-width: 767px) {
 
-    .filterDropdown{
+    .filterDropdown {
         margin-top: 40px;
     }
 }
