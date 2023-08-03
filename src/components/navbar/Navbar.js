@@ -3,13 +3,20 @@ import style from './Navbar.module.css'
 import { LIGHT_MODE, changeTheme, setTheme } from '../../utlis/ThemeUtlis';
 import { THEME_KEY } from '../../dataUtlis/DataStorage';
 
+/**
+ * Component representing the navbar containing a theme toggle button.
+ * 
+ * @returns {JSX.Element} - The Navbar component.
+ */
 export default function Navbar() {
   let [currentTheme, setCurrentTheme] = useState(null);
 
+  //Toggles between light and dark modes.
   function themeChanger() {
     setCurrentTheme(changeTheme(currentTheme));
   }
 
+  // Initialize the theme.
   useState(() => {
     let theme = localStorage.getItem(THEME_KEY);
     if (!theme) {

@@ -1,6 +1,10 @@
 import React from 'react'
 import style from './NotFound.module.css'
 
+/**
+ * A page for displaying a "Page Not Found" message.
+ * This component is rendered when a user tries to access a route that doesn't exist.
+ */
 export default function NotFound() {
   return (
     <div className={`d-flex flex-column justify-content-center align-items-center text-center ${style.notFoundPage}`}>

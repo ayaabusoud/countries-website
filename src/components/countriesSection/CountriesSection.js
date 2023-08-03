@@ -5,6 +5,11 @@ import NoResults from '../noResults/NoResults';
 import Loader from '../loader/Loader';
 import { useCountries } from '../../context/CountriesContext';
 
+/**
+ * Component that displays a section of country cards.
+ * 
+ * @returns {JSX.Element} - The CountriesSection component.
+ */
 export default function CountriesSection() {
 
   let { countries, isLoading } = useCountries();

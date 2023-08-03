@@ -5,18 +5,19 @@ import CountriesSection from '../../components/countriesSection/CountriesSection
 import { FavouritesProvider } from '../../context/FavouritesContext';
 import { CountriesProvider } from '../../context/CountriesContext';
 import FavouriteCountriesSection from '../../components/favouriteCountriesSection/FavouriteCountriesSection';
-import { ToastContainer } from 'react-toastify';
-import { notify } from '../../utlis/ToastUtlis';
-export let allCountries;
+import { BOTTOM_POSITION, notifyError } from '../../utlis/ToastUtlis';
 
+/**
+ * Home page displaying all countries along with search and filter functionality.
+ */
 export default function Home() {
     let [showToast, setShowToast] = useState(false);
     let [toastMessage, setToastMessage] = useState('');
-    let toastPosition = "bottom-left";
-    
+
+    // Show toast error notification when showToast is true
     useEffect(() => {
         if (showToast) {
-            notify(toastMessage, toastPosition);
+            notifyError(toastMessage, BOTTOM_POSITION);
             setShowToast(false);
         }
     }, [showToast]);
@@ -31,16 +32,6 @@ export default function Home() {
                         <CountriesSection />
                     </div>
                 </main>
-                <ToastContainer
-                    position={toastPosition}
-                    autoClose={30000}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable
-                    pauseOnHover />
             </CountriesProvider>
         </FavouritesProvider>
     )
