@@ -1,0 +1,18 @@
+.favouritesSection {
+    height: var(--main-height);
+    max-height: var(--main-max-height);
+    min-width: var(--favourite-section-width);
+    max-width: var(--favourite-section-width);
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.12);
+    background-color: var(--secondary-color);
+}
+
+.favouritesSection h2 {
+    font-size: 1.25rem;
+    padding-bottom: 10px;
+}
+
+.favouritesList {
+    height: calc(100% - 46px) !important;
+    padding-top: 6px;
+}

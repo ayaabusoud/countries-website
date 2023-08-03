@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
-import { getFavourites } from '../dataUtlis/dataStorage';
+import { FAVOURITES_KEY } from '../dataUtlis/DataStorage';
 
 let FavouritesContext = createContext();
 
@@ -7,7 +7,10 @@ export function FavouritesProvider({ children }) {
   let [favourites, setFavourites] = useState([]);
 
   useEffect(() => {
-    setFavourites(getFavourites());
+    let favorites = localStorage.getItem(FAVOURITES_KEY);
+    if (favorites) {
+      setFavourites(JSON.parse(favorites));
+    }
   }, []);
 
   return (

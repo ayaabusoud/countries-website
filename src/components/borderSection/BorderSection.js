@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './borderSection.module.css'
+import style from './BorderSection.module.css'
 import BorderCard from '../borderCard/BorderCard'
 
 export default function BorderSection({borderCountries}) {

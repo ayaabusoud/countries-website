@@ -19,6 +19,7 @@
     --nav-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
     --flag-shadow: none;
     --remove-favourite-button-bg: #f6f6f6;
+    --toast-shadow :0 0 5px 4px rgba(0,0,0,.05);
 }
 
 [data-theme="dark"] {
@@ -34,6 +35,7 @@
     --nav-shadow:0 0 8px 5px rgba(0,0,0,.1) ;
     --flag-shadow:0 0 15px 12px rgba(0,0,0,.1);
     --remove-favourite-button-bg: #42505f;
+    --toast-shadow: 0 0 5px 4px rgba(0,0,0,.13);
 }
 
 body{
@@ -70,6 +72,18 @@ ul,a,h1,p{
 
 .active-star {
     color: #F0770C !important;
+}
+
+.toast-notification{
+    background-color: var(--secondary-color) !important;
+    color: var(--font-color) !important;
+    font-size: 14px !important;
+    box-shadow: var(--toast-shadow) !important;
+    margin-top: 10px ;
+}
+
+.toast-notification button{
+    color: var(--font-color);
 }
 
 @media (max-width: 767px) {
