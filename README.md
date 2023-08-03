@@ -24,9 +24,12 @@ Explore countries from around the world with the World Countries Explorer web ap
 - Axios
 - Context API
 - CSS Modules
+- Bootstrap
+- jQuery
 - Lodash (for debounce)
-- FontAwesome Icons
-
+- react-toastify
+- react-bootstrap
+  
 ## Setup
 
 1. Clone the repository:
@@ -51,6 +54,6 @@ npm start
 
 ## Usage
 - Search: Use the search bar to find countries by name.
-- Filters: Filter countries by region using the dropdown menu.
+- Filters: Filter countries by region or by favourites using the dropdown menu.
 - Country Details: Click on a country card to view detailed information.
 - Favorites: Add countries to your favorites list by holding a card and dropping it in the favorites section or by clicking on the star button.
