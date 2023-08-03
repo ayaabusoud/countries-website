@@ -1,0 +1,30 @@
+.removeFavourite {
+    width: 17px;
+    height: 17px;
+    background-color: var(--remove-favourite-button-bg);
+    cursor: pointer;
+    margin-right: 28px;
+}
+
+.removeFavourite i {
+    font-size: 0.55rem;
+    color: var(--font-color);
+}
+
+.favCountryName {
+    font-size: 0.85rem !important;
+}
+
+.favouriteCountry {
+    margin-bottom: 12px;
+}
+
+.favouriteContent {
+    max-width: calc(100% - 50px);
+}
+
+.favouriteFlag {
+    width: 35px;
+    height: 20px;
+    border-radius: 4px;
+}
