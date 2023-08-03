@@ -5,6 +5,12 @@ import NoResults from '../noResults/NoResults';
 import { isEmptyObject } from 'jquery';
 import BackButton from '../backButton/BackButton';
 
+/**
+ * Component that displays detailed information about a specific country.
+ * 
+ * @param {Object} props.country - The country data to be displayed.
+ * @returns {JSX.Element} - The CountryDetailsSection component.
+ */
 export default function CountryDetailsSection({ country }) {
   const NOT_AVAILABLE = 'N/A';
   let { name, population, region, subregion, capital, tld, currencies, languages, flags, borders } = country || {};

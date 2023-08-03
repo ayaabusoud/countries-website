@@ -8,6 +8,13 @@ import { useFavourites } from '../../context/FavouritesContext';
 export const COUNTRY_ID = 'country-id';
 export const ACTIVE_FAVOURITE_BUTTON = 'active-star';
 
+/**
+ * Component that represents a country card with detailed information.
+ * 
+ * @param {Object} props - The component props containing country data.
+ * @param {Object} props.country - The country data to be displayed.
+ * @returns {JSX.Element} - The CountryCard component.
+ */
 export default function CountryCard(props) {
     const NOT_AVAILABLE = 'N/A';
     let { name, flags, population, region, capital } = props.country;

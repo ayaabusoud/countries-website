@@ -5,6 +5,12 @@ import { useFavourites } from '../../context/FavouritesContext';
 import { useCountries } from '../../context/CountriesContext';
 import { COUNTRY_ID } from '../countryCard/CountryCard';
 
+/**
+ * Component representing a single favourite country item.
+ * 
+ * @param {string} props.id - The ID of the favourite country.
+ * @returns {JSX.Element|null} - The FavouriteCountryItem component.
+ */
 export default function FavouriteCountryItem({ id }) {
     let { allCountries } = useCountries();
     let { favourites, setFavourites } = useFavourites();
