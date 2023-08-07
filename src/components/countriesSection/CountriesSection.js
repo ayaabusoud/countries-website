@@ -18,7 +18,7 @@ export default function CountriesSection() {
 
     <div className={`row ${style.countriesContainer} overflow-y-scroll position-relative`} draggable="false">
       {isLoading && <Loader />}
-      {!isLoading && countries.length == 0 ? (
+      {!isLoading && countries.length === 0 ? (
         <NoResults message={"No countries found"} />
       ) : (
         countries.map((country, index) => <CountryCard key={index} country={country} />)

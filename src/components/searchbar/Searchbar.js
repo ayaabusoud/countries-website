@@ -10,11 +10,10 @@ import { useFavourites } from '../../context/FavouritesContext';
  * 
  * @param {object} props - The component props.
  * @param {string} props.placeholder - The placeholder text for the search input.
- * @param {string} props.name - The name attribute for the search input.
  * @returns {JSX.Element} - The search bar component.
  */
 export default function Searchbar(props) {
-  let { placeholder, name } = props;
+  let { placeholder } = props;
   let { setIsLoading, setCountries, setSearchedCountries} = useCountries();
   let { favourites } = useFavourites();
 

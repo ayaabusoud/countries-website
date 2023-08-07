@@ -20,7 +20,7 @@ export function storeFavourite(favourites = [], countryId) {
  * @returns {Array} - The updated list of favourite country IDs after removal.
  */
 export function removeFavouriteFromStorage(favourites, countryId) {
-    let updatedFavourites = favourites.filter(country => country != countryId);
+    let updatedFavourites = favourites.filter(country => country !== countryId);
     localStorage.setItem(FAVOURITES_KEY, JSON.stringify(updatedFavourites));
     return updatedFavourites;
 }
