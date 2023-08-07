@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/countries-website/static/css/main.6e25e8e1.css",
-    "main.js": "/countries-website/static/js/main.b58fb8ac.js",
+    "main.js": "/countries-website/static/js/main.252b2395.js",
     "static/js/651.8486ee64.chunk.js": "/countries-website/static/js/651.8486ee64.chunk.js",
     "static/media/fa-solid-900.ttf": "/countries-website/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
     "static/media/fa-brands-400.ttf": "/countries-website/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
@@ -13,11 +13,11 @@
     "static/media/fa-v4compatibility.woff2": "/countries-website/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "index.html": "/countries-website/index.html",
     "main.6e25e8e1.css.map": "/countries-website/static/css/main.6e25e8e1.css.map",
-    "main.b58fb8ac.js.map": "/countries-website/static/js/main.b58fb8ac.js.map",
+    "main.252b2395.js.map": "/countries-website/static/js/main.252b2395.js.map",
     "651.8486ee64.chunk.js.map": "/countries-website/static/js/651.8486ee64.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6e25e8e1.css",
-    "static/js/main.b58fb8ac.js"
+    "static/js/main.252b2395.js"
   ]
 }
